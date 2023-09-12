@@ -25,17 +25,13 @@ void usart_init(void)
 
 void main(void)
 {
-unsigned char str[16];
 int a = 0;
 
 usart_init();
         
 while (1)
     {
-      //scanf("%s",str);
-      //  puts(str);  
-     //printf("AVR");    
-     //delay_ms(1000);
+
      
      
        printf("AVR: %d " ,a);

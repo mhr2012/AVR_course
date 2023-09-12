@@ -15,15 +15,15 @@ FLASH Allocation [words]
 Function                                                                          Address   Size
 ------------------------------------------------------------------------------------------------
 usart_init                                                                        0x00069      9
-main                                                                              0x00072     25
-putchar                                                                           0x0008B      7
-put_usart_G100                                                                    0x00092     13
-_ftoe_G100                                                                        0x0009F    355
-_print_G100                                                                       0x00202    749
-printf                                                                            0x004EF     37
-strcpyf                                                                           0x00514     13
-strlen                                                                            0x00521     12
-strlenf                                                                           0x0052D     13
-ftrunc                                                                            0x0053A     49
-floor                                                                             0x0056B     23
-ftoa                                                                              0x00582    296
+main                                                                              0x00072     24
+putchar                                                                           0x0008A      7
+put_usart_G100                                                                    0x00091     13
+_ftoe_G100                                                                        0x0009E    355
+_print_G100                                                                       0x00201    749
+printf                                                                            0x004EE     37
+strcpyf                                                                           0x00513     13
+strlen                                                                            0x00520     12
+strlenf                                                                           0x0052C     13
+ftrunc                                                                            0x00539     49
+floor                                                                             0x0056A     23
+ftoa                                                                              0x00581    296

@@ -32,13 +32,10 @@ usart_init();
         
 while (1)
     {
-      //scanf("%s",str);
-      //  puts(str);  
-     //printf("AVR");    
-     //delay_ms(1000);
+
      
      
-       printf("AVR: %d /n " ,a);
+       printf("AVR: %d " ,a);
        delay_ms(1000);
        a = a+ 1; // a+=1;
      
