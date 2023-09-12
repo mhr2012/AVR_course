@@ -1,0 +1,6 @@
+VERSION:3 SOURCE_TIMESTAMP:572C7B4E
+NODE:I LEVEL:0 LINE:3 "C:\cvavr\inc\io.h"
+NODE:I LEVEL:0 LINE:4 "C:\cvavr\inc\delay.h"
+NODE:I LEVEL:0 LINE:5 "C:\cvavr\inc\stdio.h"
+NODE:F LEVEL:0 LINE:9 "usart_init(void)"
+NODE:F LEVEL:0 LINE:26 "main(void)"

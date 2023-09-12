@@ -1,0 +1,51 @@
+
+
+#include <io.h>
+#include <delay.h>
+#include <stdio.h>
+// function definitions
+void usart_init(void);
+
+void usart_init(void)
+{
+ // USART initialization
+ // Communication Parameters: 8 Data, 1 Stop, No Parity
+ // USART Receiver: Off
+ // USART Transmitter: On
+ // USART Mode: Asynchronous
+ // USART Baud Rate: 9600
+ //UCSRA = 0;   
+
+ UCSRB = (1 << TXEN) | (1<<RXEN) | (0<<UDRIE) | (0<<TXCIE) | (0 << UCSZ2) | (0 << RXB8) | (0 << TXB8);
+ UCSRC  = (0 << URSEL) | (1 << UCSZ1) | (1 << UCSZ0);
+ UBRRH = 0x00;
+ UBRRL = 0x33;
+}
+
+
+void main(void)
+{
+unsigned char str[16];
+int a = 0;
+
+usart_init();
+        
+while (1)
+    {
+      //scanf("%s",str);
+      //  puts(str);  
+     //printf("AVR");    
+     //delay_ms(1000);
+     
+     
+       printf("AVR: %d " ,a);
+       delay_ms(1000);
+       a = a+ 1; // a+=1;
+     
+     
+      
+
+     
+   }
+
+}
