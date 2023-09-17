@@ -1,0 +1,27 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+_base_y                                                                           0x0262       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+_lcd_x                                                                            R5           1
+_lcd_y                                                                            R4           1
+_lcd_maxx                                                                         R7           1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+main                                                                              0x00060     53
+_lcd_write_nibble_G100                                                            0x00095     20
+_lcd_write_data                                                                   0x000A9     12
+lcd_gotoxy                                                                        0x000B5     13
+lcd_clear                                                                         0x000C2     18
+lcd_putchar                                                                       0x000D4     21
+lcd_puts                                                                          0x000E9     17
+lcd_init                                                                          0x000FA     58
