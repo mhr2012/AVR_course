@@ -1,0 +1,11 @@
+1- open directory :
+
+C:\ProgramData\HP InfoTech\CodeVisionAVR
+
+2- delet file :
+
+cvdocking.ini 
+cvtoolbars.ini
+
+3-if don't solve delet :
+cvavr.ini
