@@ -1,0 +1,6 @@
+VERSION:3 SOURCE_TIMESTAMP:5733508D
+NODE:I LEVEL:0 LINE:1 "C:\cvavr\inc\io.h"
+NODE:I LEVEL:0 LINE:2 "C:\cvavr\inc\delay.h"
+NODE:M LEVEL:0 LINE:3 "Ref_Voltage"
+NODE:F LEVEL:0 LINE:12 "main(void)"
+NODE:F LEVEL:0 LINE:33 "Read_ADC(unsigned char ADC_CH)"
