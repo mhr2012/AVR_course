@@ -1,0 +1,48 @@
+#include <io.h>
+#include <delay.h>
+#include <alcd.h>
+#include <stdio.h>
+#define Ref_Voltage (0<<REFS1) | (1<<REFS0)
+
+
+
+
+
+
+
+void main(void)
+{
+unsigned char buff[32];
+int s = 0;
+ 
+int m = 0;
+
+int h = 0;
+lcd_init(16);
+
+ while (1)     
+ {
+	
+
+	
+	if(s == 60){
+		m += 1;
+		s = 0;
+	}
+	if(m == 60){
+		h +=1;
+		m = 0;	
+	}
+	if( h== 24){
+		h = 0;
+	}
+	
+	sprintf(buff,"%02d:%02d:%02d",h,m,s);
+    lcd_gotoxy(0,0);
+    lcd_puts(buff);
+  	s += 1;
+	delay_ms(200);
+ }
+}
+
+
