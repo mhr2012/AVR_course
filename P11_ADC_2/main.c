@@ -32,7 +32,7 @@ PORTD = 0;
 
 unsigned int Read_ADC(unsigned char ADC_CH){
 
-    ADMUX |= (0xff & Ref_Voltage) |  ADC_CH;
+    ADMUX = (0xff & Ref_Voltage) |  ADC_CH;
     delay_us(15);
     ADCSR |= 0x40;//(1<<ADSC)start conversion
     while((ADCSRA & 0x10) == 0); // wait for complite conversion
