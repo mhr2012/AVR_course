@@ -1,0 +1,28 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+_base_y                                                                           0x0260       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+_lcd_x                                                                            R5           1
+_lcd_y                                                                            R4           1
+_lcd_maxx                                                                         R7           1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+ext_int2_isr                                                                      0x00066     35
+main                                                                              0x00089     17
+keypad                                                                            0x0009A     64
+_lcd_write_nibble_G100                                                            0x000DA     20
+_lcd_write_data                                                                   0x000EE     12
+lcd_gotoxy                                                                        0x000FA     13
+lcd_clear                                                                         0x00107     18
+lcd_putchar                                                                       0x00119     20
+lcd_init                                                                          0x0012D     58
