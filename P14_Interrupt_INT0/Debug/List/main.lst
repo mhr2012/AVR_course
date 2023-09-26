@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.30  E:\3-Presentation\1-Codevision\P14_Interrupt\Debug\List\main.asm Tue Sep 26 06:10:04 2023
+AVRASM ver. 2.1.30  C:\Users\ASUS.PIESC\Desktop\New folder\AVR_course\P14_Interrupt_INT0\Debug\List\main.asm Tue Sep 26 08:33:45 2023
 
                  
                  
@@ -1179,14 +1179,17 @@ AVRASM ver. 2.1.30  E:\3-Presentation\1-Codevision\P14_Interrupt\Debug\List\main
                  	.EQU __sm_adc_noise_red=0x10
                  	.SET power_ctrl_reg=mcucr
                  	#endif
-                 ;interrupt [2] void ext_int0_isr(void)
-                 ; 0000 0004 {
+                 ;
+                 ;
+                 ;
+                 ;interrupt [EXT_INT0] void ext_int0_isr(void)
+                 ; 0000 0007 {
                  
                  	.CSEG
                  _ext_int0_isr:
                  ; .FSTART _ext_int0_isr
-                 ; 0000 0005 
-                 ; 0000 0006  PORTA.0 = !PORTA.0;
+                 ; 0000 0008 
+                 ; 0000 0009     PORTA.0 = !PORTA.0;
 000045 9bd8      	SBIS 0x1B,0
 000046 c002      	RJMP _0x3
 000047 98d8      	CBI  0x1B,0
@@ -1194,33 +1197,35 @@ AVRASM ver. 2.1.30  E:\3-Presentation\1-Codevision\P14_Interrupt\Debug\List\main
                  _0x3:
 000049 9ad8      	SBI  0x1B,0
                  _0x4:
-                 ; 0000 0007 }
+                 ; 0000 000A  }
 00004a 9518      	RETI
                  ; .FEND
+                 ;
+                 ;
                  ;void main(void){
-                 ; 0000 0008 void main(void){
+                 ; 0000 000D void main(void){
                  _main:
                  ; .FSTART _main
-                 ; 0000 0009 
-                 ; 0000 000A DDRA.0 = 1;
+                 ; 0000 000E 
+                 ; 0000 000F DDRA.0 = 1;
 00004b 9ad0      	SBI  0x1A,0
-                 ; 0000 000B 
-                 ; 0000 000C 
-                 ; 0000 000D GICR = (0<<INT1) | (1<<INT0) | (0<<INT2);
+                 ; 0000 0010 
+                 ; 0000 0011 
+                 ; 0000 0012 GICR = (0<<INT1) | (1<<INT0) | (0<<INT2);
 00004c e4e0      	LDI  R30,LOW(64)
 00004d bfeb      	OUT  0x3B,R30
-                 ; 0000 000E 
-                 ; 0000 000F MCUCR = (0<<ISC11) | (0<<ISC10) | (0<<ISC01) | (0<<ISC00);
+                 ; 0000 0013 
+                 ; 0000 0014 MCUCR = (0<<ISC11) | (0<<ISC10) | (0<<ISC01) | (0<<ISC00);
 00004e e0e0      	LDI  R30,LOW(0)
 00004f bfe5      	OUT  0x35,R30
-                 ; 0000 0010 #asm("sei")
+                 ; 0000 0015 #asm("sei")
 000050 9478      	sei
-                 ; 0000 0011 while (1){
+                 ; 0000 0016 while (1){
                  _0x7:
-                 ; 0000 0012 
-                 ; 0000 0013 }
+                 ; 0000 0017 
+                 ; 0000 0018 }
 000051 cfff      	RJMP _0x7
-                 ; 0000 0014 }
+                 ; 0000 0019 }
                  _0xA:
 000052 cfff      	RJMP _0xA
                  ; .FEND

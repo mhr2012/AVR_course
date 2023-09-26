@@ -1175,14 +1175,17 @@ __CLEAR_SRAM:
 	.EQU __sm_adc_noise_red=0x10
 	.SET power_ctrl_reg=mcucr
 	#endif
-;interrupt [2] void ext_int0_isr(void)
-; 0000 0004 {
+;
+;
+;
+;interrupt [EXT_INT0] void ext_int0_isr(void)
+; 0000 0007 {
 
 	.CSEG
 _ext_int0_isr:
 ; .FSTART _ext_int0_isr
-; 0000 0005 
-; 0000 0006  PORTA.0 = !PORTA.0;
+; 0000 0008 
+; 0000 0009     PORTA.0 = !PORTA.0;
 	SBIS 0x1B,0
 	RJMP _0x3
 	CBI  0x1B,0
@@ -1190,33 +1193,35 @@ _ext_int0_isr:
 _0x3:
 	SBI  0x1B,0
 _0x4:
-; 0000 0007 }
+; 0000 000A  }
 	RETI
 ; .FEND
+;
+;
 ;void main(void){
-; 0000 0008 void main(void){
+; 0000 000D void main(void){
 _main:
 ; .FSTART _main
-; 0000 0009 
-; 0000 000A DDRA.0 = 1;
+; 0000 000E 
+; 0000 000F DDRA.0 = 1;
 	SBI  0x1A,0
-; 0000 000B 
-; 0000 000C 
-; 0000 000D GICR = (0<<INT1) | (1<<INT0) | (0<<INT2);
+; 0000 0010 
+; 0000 0011 
+; 0000 0012 GICR = (0<<INT1) | (1<<INT0) | (0<<INT2);
 	LDI  R30,LOW(64)
 	OUT  0x3B,R30
-; 0000 000E 
-; 0000 000F MCUCR = (0<<ISC11) | (0<<ISC10) | (0<<ISC01) | (0<<ISC00);
+; 0000 0013 
+; 0000 0014 MCUCR = (0<<ISC11) | (0<<ISC10) | (0<<ISC01) | (0<<ISC00);
 	LDI  R30,LOW(0)
 	OUT  0x35,R30
-; 0000 0010 #asm("sei")
+; 0000 0015 #asm("sei")
 	sei
-; 0000 0011 while (1){
+; 0000 0016 while (1){
 _0x7:
-; 0000 0012 
-; 0000 0013 }
+; 0000 0017 
+; 0000 0018 }
 	RJMP _0x7
-; 0000 0014 }
+; 0000 0019 }
 _0xA:
 	RJMP _0xA
 ; .FEND

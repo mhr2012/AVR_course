@@ -1,8 +1,9 @@
 RAM Allocation [bytes]
 Variable                                                                          Address   Size
 ------------------------------------------------------------------------------------------------
-_base_y                                                                           0x0260       4
-_seed                                                                             0x0264       4
+buff                                                                              0x0260      32
+_base_y                                                                           0x0280       4
+_seed                                                                             0x0284       4
 
 EEPROM Allocation [bytes]
 Variable                                                                          Address   Size
@@ -20,21 +21,21 @@ FLASH Allocation [words]
 Function                                                                          Address   Size
 ------------------------------------------------------------------------------------------------
 adc_isr                                                                           0x0006D      3
-main                                                                              0x00070     39
-put_buff_G100                                                                     0x00097     64
-_ftoe_G100                                                                        0x000D7    355
-_print_G100                                                                       0x0023A    749
-sprintf                                                                           0x00527     60
-_lcd_write_nibble_G101                                                            0x00563     20
-_lcd_write_data                                                                   0x00577     12
-lcd_gotoxy                                                                        0x00583     13
-lcd_clear                                                                         0x00590     18
-lcd_putchar                                                                       0x005A2     21
-lcd_puts                                                                          0x005B7     17
-lcd_init                                                                          0x005C8     58
-strcpyf                                                                           0x00602     13
-strlen                                                                            0x0060F     12
-strlenf                                                                           0x0061B     13
-ftrunc                                                                            0x00628     49
-floor                                                                             0x00659     23
-ftoa                                                                              0x00670    296
+main                                                                              0x00070     52
+_lcd_write_nibble_G100                                                            0x000A4     20
+_lcd_write_data                                                                   0x000B8     12
+lcd_gotoxy                                                                        0x000C4     13
+lcd_clear                                                                         0x000D1     18
+lcd_putchar                                                                       0x000E3     21
+lcd_puts                                                                          0x000F8     17
+lcd_init                                                                          0x00109     58
+put_buff_G101                                                                     0x00143     64
+_ftoe_G101                                                                        0x00183    355
+_print_G101                                                                       0x002E6    749
+sprintf                                                                           0x005D3     60
+strcpyf                                                                           0x0060F     13
+strlen                                                                            0x0061C     12
+strlenf                                                                           0x00628     13
+ftrunc                                                                            0x00635     49
+floor                                                                             0x00666     23
+ftoa                                                                              0x0067D    296

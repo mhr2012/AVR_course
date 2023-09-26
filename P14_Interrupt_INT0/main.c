@@ -1,10 +1,15 @@
  
  #include <mega32a.h>
-interrupt [2] void ext_int0_isr(void)
+
+ 
+ 
+interrupt [EXT_INT0] void ext_int0_isr(void)
 {
  
- PORTA.0 = !PORTA.0;
-}
+    PORTA.0 = !PORTA.0;
+ }
+
+
 void main(void){
 
 DDRA.0 = 1;
